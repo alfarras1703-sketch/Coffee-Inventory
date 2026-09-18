@@ -1,3 +1,4 @@
+```php
 <?php
 session_start();
 
@@ -17,6 +18,13 @@ $query = mysqli_query($conn, "
         ON products.category_id = categories.id
     ORDER BY products.id DESC
 ");
+
+$products = [];
+
+while ($product = mysqli_fetch_assoc($query)) {
+    $products[] = $product;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -163,7 +171,7 @@ $query = mysqli_query($conn, "
                     <?php
                     $no = 1;
 
-                    while ($product = mysqli_fetch_assoc($query)) {
+                    foreach ($products as $product) {
                     ?>
 
                         <tr>
@@ -256,3 +264,4 @@ function confirmDelete(event, url) {
 
 </body>
 </html>
+```

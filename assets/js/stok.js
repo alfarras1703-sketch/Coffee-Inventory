@@ -5,6 +5,15 @@ console.log("STOK.JS BERHASIL DIMUAT");
    UBAH STOK
 ========================= */
 
+/** 
+ * Mengatur proses penambahan atau pengurangan stok produk.
+ * 
+ * @param {number} id ID produk yang akan diubah stoknya. 
+ * @param {string} aksi Jenis aksi, yaitu tambah atau kurangi. 
+ * @param {string} namaProduk Nama produk yang ditampilkan pada dialog. 
+ * @returns {void} 
+ */
+
 function ubahStok(id, aksi, namaProduk) {
 
     const judul =
